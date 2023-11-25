@@ -1,0 +1,23 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.box{
+    display: inline-block;
+    width: 40%;
+    margin: 5% 5%;
+    vertical-align: top;
+    height: 100%;
+}
+img{
+    width: 300px;
+
+}
+.searchyozuvchi{
+    font-family: cursive;
+    font-size: 20px;
+}
+/* .search-book{
+    display: flex;
+    justify-content: center;
+} */

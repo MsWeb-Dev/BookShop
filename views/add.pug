@@ -1,0 +1,76 @@
+include head 
+include navbar
+.container
+  br
+  form.w-50.mx-auto(method='POST')
+   if success
+      h1.text-center Muvaffaqiyatli qo'shildi
+   if data 
+    .mb-3
+      label.form-label(for='exampleInputEmail9') Rasm
+      input#exampleInputEmail1.form-control(type='file' aria-describedby='emailHelp' name='file' required  value=data.file)
+    .mb-3
+      label.form-label(for='exampleInputEmail9') Kitob pdf
+      input#exampleInputEmail1.form-control(type='file' aria-describedby='emailHelp' name='book' required value=data.book)
+    .mb-3
+      label.form-label(for='exampleInputEmail1') Kitob nomi
+      input#exampleInputEmail1.form-control(type='text' aria-describedby='emailHelp' name='nomi' required value=data.nomi)
+    .mb-3
+      label.form-label(for='exampleInputEmail2') Muallifi
+      input#exampleInputEmail1.form-control(type='text' aria-describedby='emailHelp' name='yozuvchi' required value=data.yozuvchi)
+    .mb-3
+      label.form-label(for='exampleInputEmail3') Yili
+      input#exampleInputEmail1.form-control(type='number' aria-describedby='emailHelp' name='yili' required value=data.yili)
+    .mb-3
+      label.form-label(for='exampleInputEmail4') Sahifasi
+      input#exampleInputEmail1.form-control(type='text' aria-describedby='emailHelp' name='sahifasi' required value=data.sahifasi)
+    .mb-3
+      label.form-label(for='exampleInputEmail5') O&apos;qishlar soni
+      input#exampleInputEmail1.form-control(type='number' aria-describedby='emailHelp' name='oqishlar_soni' required value=data.oqishlar_soni)
+    .mb-3
+      label.form-label(for='exampleInputEmail6') Kitob turi
+      select.form-select(aria-label='Default select example' name='turi' required value=data.turi)
+        option(selected='') She'riy
+        option(value='badiiy') Badiiy
+        option(value='ilmiy') Ilmiy
+        option(value='darslik') Darslik
+        option(value='ommaviy') Ommaviy
+        option(value='fantastik') Fantastik
+      
+    .mb-3 
+      label.form-label(for='exampleInputEmail7') Narxi
+      input#exampleInputEmail1.form-control(type='number' aria-describedby='emailHelp' required name='narxi' value=data.narxi)
+    button.btn.btn-primary(type='submit') Submit
+   else
+    .mb-3
+      label.form-label(for='exampleInputEmail9') Rasm
+      input#exampleInputEmail1.form-control(type='file' aria-describedby='emailHelp' name='image')
+    .mb-3
+      label.form-label(for='exampleInputEmail1') Kitob nomi
+      input#exampleInputEmail1.form-control(type='text' aria-describedby='emailHelp' name='nomi')
+    .mb-3
+      label.form-label(for='exampleInputEmail2') Muallifi
+      input#exampleInputEmail1.form-control(type='text' aria-describedby='emailHelp' name='yozuvchi')
+    .mb-3
+      label.form-label(for='exampleInputEmail3') Yili
+      input#exampleInputEmail1.form-control(type='number' aria-describedby='emailHelp' name='yili')
+    .mb-3
+      label.form-label(for='exampleInputEmail4') Sahifasi
+      input#exampleInputEmail1.form-control(type='text' aria-describedby='emailHelp' name='sahifasi')
+    .mb-3
+      label.form-label(for='exampleInputEmail5') O&apos;qishlar soni
+      input#exampleInputEmail1.form-control(type='number' aria-describedby='emailHelp' name='oqishlar_soni')
+    .mb-3
+      label.form-label(for='exampleInputEmail6') Kitob turi
+      select.form-select(aria-label='Default select example' name='turi')
+        option(selected='') Tanlang
+        option(value='badiiy') Badiiy
+        option(value='ilmiy') Ilmiy
+        option(value='darslik') Darslik
+        option(value='ommaviy') Ommaviy
+        option(value='fantastik') Fantastik
+      
+    .mb-3 
+      label.form-label(for='exampleInputEmail7') Narxi
+      input#exampleInputEmail1.form-control(type='number' aria-describedby='emailHelp' name='narxi')
+    button.btn.btn-primary(type='submit') Submit

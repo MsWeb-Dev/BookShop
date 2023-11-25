@@ -1,0 +1,27 @@
+include head
+include navbar
+if data 
+ .container.border.border-danger
+     each datas in data 
+      div.box.card.text-center.search-book
+        .img.img-fluid.card-img.d-block.mx-auto.w-100
+            img(src=`/image/${datas.file}` alt="rasm" )
+        p.searchyozuvchi Nomi: 
+         span=datas.nomi
+        p.searchyozuvchi Yozuvchi: 
+         span=datas.yozuvchi
+        p.searchyozuvchi Yili: 
+         span=datas.yili
+        p.searchyozuvchi Sahifasi: 
+         span=datas.sahifasi
+        p.searchyozuvchi O'qishlar_soni: 
+         span=datas.oqishlar_soni 
+        p.searchyozuvchi turi: 
+         span=datas.turi
+        p.searchyozuvchi Narxi:
+         span=datas.narxi 
+        a.btn.btn-outline-info.d-block.w-100(href=`books/${datas._id}`) Batafsil
+else 
+    h1.text-center Malumot yoq
+
+

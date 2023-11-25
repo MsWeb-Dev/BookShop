@@ -1,0 +1,31 @@
+nav.navbar.navbar-expand-lg.navbar-light.bg-light
+  .container-fluid
+    a.navbar-brand(href='/') Kitoblar
+    button.navbar-toggler(type='button' data-bs-toggle='collapse' data-bs-target='#navbarSupportedContent' aria-controls='navbarSupportedContent' aria-expanded='false' aria-label='Toggle navigation')
+      span.navbar-toggler-icon
+    #navbarSupportedContent.collapse.navbar-collapse
+      ul.navbar-nav.me-auto.mb-2.mb-lg-0
+        if addActive
+          li.nav-item
+            a.nav-link.active(aria-current='page' href='/') Bosh sahifa
+          li.nav-item
+            a.nav-link.active(href='/add') Kitob qo&apos;shish
+          li.nav-item.btn.btn-outline-info
+            a.nav-link.active(href='/deleted') Korzinka
+        else
+          li.nav-item
+            a.nav-link(aria-current='page' href='/') Bosh sahifa
+          li.nav-item
+            a.nav-link(href='/add') Kitob qo&apos;shish
+          li.nav-item
+            a.nav-link(href='/deleted') Korzinka
+      form.d-flex(action="search" method="POST")
+        label.form-label(for='exampleDataList') 
+          input#exampleDataList.form-control(list='datalistOptions' placeholder='Type to search...' name="query")
+          datalist#datalistOptions
+            option(value='Kitob nomi')
+            option(value='Yozuvchisi')
+            option(value='Narxi')
+            option(value='Turi')
+            option(value='Sahifasi')
+

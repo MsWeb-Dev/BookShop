@@ -1,0 +1,57 @@
+include head 
+include navbar 
+.mt-3.container
+ form.row.g-3.d-flex.justify-content-around(action="/", method='POST')
+  .col-auto.mb-3
+   label Alifbo boyicha tartiblash
+    input(type="radio" name="yozuvchi" value="1" ) 
+   label.ml-3 Teskari alifbo shartida tartiblash
+    input(type="radio" name="yozuvchi" value="-1" )
+    input.btn.btn-outline-danger(type="submit")
+  //-   label.visually-hidden(for='inputPassword2') Kitob nomi
+  //-   input#inputPassword2.form-control(type='search' placeholder='Kitob nomi' value=data.nomi)
+  //- .col-auto.mb-3
+  //-   label.visually-hidden(for='inputPassword2') Yozuvchisi
+  //-   input#inputPassword2.form-control(type='text' placeholder='Yozuvchisi')
+  //- .col-auto.mb-3
+  //-   label.visually-hidden(for='inputPassword2') Yili
+  //-   input#inputPassword2.form-control(type='text' placeholder='Yili')
+  //- .col-auto.mb-3
+  //-   label.visually-hidden(for='inputPassword2') Sahifasi
+  //-   input#inputPassword2.form-control(type='text' placeholder='Sahifasi')
+  //- .col-auto.mb-3
+  //-   label.visually-hidden(for='inputPassword2') O'qishlar soni
+  //-   input#inputPassword2.form-control(type='text' placeholder='Oqishlar soni')
+  //- .col-auto.mb-3
+  //-   label.visually-hidden(for='inputPassword2') Kitob turi
+  //-   input#inputPassword2.form-control(type='text' placeholder='Kitob turi')
+  //- .col-auto.mb-3
+  //-   label.visually-hidden(for='inputPassword2') Narxi
+  //-   input#inputPassword2.form-control(type='text' placeholder='Narxi')
+
+  
+if data
+ .container.border.border-danger
+  each datas in data 
+     div.box.card.text-center.d-inline-block
+      .img.img-fluid.card-img.d-block.mx-auto.w-100
+        img(src=`/image/${datas.file}` alt="rasm" )
+      p.nomi.card-title.font-monospace Nomi: 
+       span=datas.nomi
+      p.yozuvchi.card-title.font-monospace Yozuvchi: 
+       span=datas.yozuvchi
+      p.yili.card-title.font-monospace Yili: 
+       span=datas.yili
+      p.sahifasi.font-monospace Sahifasi: 
+       span=datas.sahifasi
+      p.oqishlar_soni.font-monospace O'qishlar_soni: 
+       span=datas.oqishlar_soni 
+      p.turi.font-monospace turi: 
+       span=datas.turi
+      p.narxi.font-monospace Narxi:
+       span=datas.narxi 
+      a.btn.btn-outline-info.d-block.w-100(href=`books/${datas._id}`) Batafsil
+  else
+    h1.text-center Malumot yoq
+
+
