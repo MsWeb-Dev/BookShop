@@ -21,3 +21,23 @@ img{
     display: flex;
     justify-content: center;
 } */
+
+
+@media only screen and (max-width: 600px) {
+    .container-box{
+        display: grid;
+        grid-template-columns: auto;
+        border:2px solid red;
+        text-align: center;
+    }
+    /* .container-box .img{
+        width: 200px;
+        margin-left: 37%!important;
+    } */
+    .card-box{
+        width: 400px;
+    }
+    .container-box .box{
+        width: 95%;
+    }
+  }

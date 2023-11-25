@@ -31,26 +31,27 @@ include navbar
 
   
 if data
- .container.border.border-danger
+ .container.border.border-danger.container-box
   each datas in data 
      div.box.card.text-center.d-inline-block
       .img.img-fluid.card-img.d-block.mx-auto.w-100
         img(src=`/image/${datas.file}` alt="rasm" )
-      p.nomi.card-title.font-monospace Nomi: 
-       span=datas.nomi
-      p.yozuvchi.card-title.font-monospace Yozuvchi: 
-       span=datas.yozuvchi
-      p.yili.card-title.font-monospace Yili: 
-       span=datas.yili
-      p.sahifasi.font-monospace Sahifasi: 
-       span=datas.sahifasi
-      p.oqishlar_soni.font-monospace O'qishlar_soni: 
-       span=datas.oqishlar_soni 
-      p.turi.font-monospace turi: 
-       span=datas.turi
-      p.narxi.font-monospace Narxi:
-       span=datas.narxi 
-      a.btn.btn-outline-info.d-block.w-100(href=`books/${datas._id}`) Batafsil
+      .card-box
+        p.nomi.card-title.font-monospace Nomi: 
+         span=datas.nomi
+        p.yozuvchi.card-title.font-monospace Yozuvchi: 
+         span=datas.yozuvchi
+        p.yili.card-title.font-monospace Yili: 
+         span=datas.yili
+        p.sahifasi.font-monospace Sahifasi: 
+         span=datas.sahifasi
+        p.oqishlar_soni.font-monospace O'qishlar_soni: 
+         span=datas.oqishlar_soni 
+        p.turi.font-monospace turi: 
+         span=datas.turi
+        p.narxi.font-monospace Narxi:
+         span=datas.narxi 
+        a.btn.btn-outline-info.d-block.w-100(href=`books/${datas._id}`) Batafsil
   else
     h1.text-center Malumot yoq
 
